@@ -93,3 +93,7 @@ streamlit run app.py
 - Reranking retrieved documents
 - Conversation memory
 - Support for additional document formats
+
+## Additional Documentation
+
+Further implementation notes and engineering decisions are available in `ENGINEERING_DECISIONS.md`.

@@ -22,6 +22,14 @@ env/
 # Generated files
 faiss.index
 
+# Python packaging
+*.egg-info/
+build/
+dist/
+
+# Jupyter (only if you have notebooks)
+.ipynb_checkpoints/
+
 # OS files
 .DS_Store
 Thumbs.db

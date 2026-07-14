@@ -1,7 +1,7 @@
 import os
 import google.generativeai as genai
 from collections import Counter
-from dot_env import load_dotenv
+from dotenv import load_dotenv
 
 load_dotenv()
 
