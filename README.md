@@ -1,20 +1,26 @@
-# Microsoft Teams Troubleshooting Assistant (RAG)
+# Microsoft Teams Troubleshooting Assistant
 
 ## Overview
 
-This project implements a Retrieval-Augmented Generation (RAG) based troubleshooting assistant for Microsoft Teams. It retrieves relevant information from documentation using semantic search and generates context-aware responses using Google's Gemini model.
+A Retrieval-Augmented Generation (RAG) based troubleshooting assistant for Microsoft Teams. The application retrieves relevant information from documents using semantic search and generates context-aware responses using Google's Gemini model.
+
+The project supports document ingestion, embedding generation, vector search, and an interactive Streamlit interface for answering troubleshooting queries.
+
+---
 
 ## Features
 
-- PDF and URL document ingestion
+- PDF document ingestion
+- URL content ingestion
 - Automatic text extraction
 - Text chunking
-- Embedding generation
-- FAISS vector search
+- Embedding generation using Sentence Transformers
+- Semantic search using FAISS
 - PostgreSQL metadata storage
-- Prompt engineering
-- Gemini-powered answer generation
-- Streamlit web interface
+- Google Gemini integration for answer generation
+- Streamlit-based user interface
+
+---
 
 ## Tech Stack
 
@@ -22,30 +28,48 @@ This project implements a Retrieval-Augmented Generation (RAG) based troubleshoo
 - Streamlit
 - Google Gemini API
 - FAISS
-- PostgreSQL
-- LangChain
 - Sentence Transformers
+- PostgreSQL
+- BeautifulSoup
+- PDFPlumber
+- Requests
+- NumPy
+
+---
 
 ## Project Structure
 
 ```
-app.py
-db/
-ingestion/
-llm/
-pages/
-pipeline.py
+.
+├── app.py
+├── pipeline.py
+├── db/
+├── ingestion/
+├── llm/
+├── pages/
+└── ...
 ```
 
-## Setup
+---
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone <repo-url>
+cd <repo-name>
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Create a `.env` file with
+Create a `.env` file
 
-```
+```text
 DB_NAME=
 DB_USER=
 DB_PASSWORD=
@@ -54,15 +78,18 @@ DB_PORT=
 GEMINI_API_KEY=
 ```
 
-Run
+Run the application
 
 ```bash
 streamlit run app.py
 ```
 
+---
+
 ## Future Improvements
 
 - Hybrid retrieval
-- Better reranking
-- Improved chunking strategy
+- Better chunking strategies
+- Reranking retrieved documents
 - Conversation memory
+- Support for additional document formats
