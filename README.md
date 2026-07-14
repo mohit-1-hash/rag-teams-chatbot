@@ -97,3 +97,7 @@ streamlit run app.py
 ## Additional Documentation
 
 Further implementation notes and engineering decisions are available in `doc\ENGINEERING_DECISIONS.md`.
+
+## Note
+
+This project was developed as part of my exploration of Retrieval-Augmented Generation (RAG) systems and focuses on understanding the engineering pipeline behind document-grounded question answering.
